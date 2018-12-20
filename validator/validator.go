@@ -62,6 +62,16 @@ func SetNilPtrAllowedByRequired(value bool) {
 	nilPtrAllowedByRequired = value
 }
 
+//手提电话（不带前缀）最高11位
+func IsCellphone(str string) bool {
+	return rxCellPhone.MatchString(str)
+}
+
+//家用电话（不带前缀） 最高8位
+func IsTelephone(str string) bool {
+	return rxTelPhone.MatchString(str)
+}
+
 // IsEmail check if the string is an email.
 func IsEmail(str string) bool {
 	// TODO uppercase letters are not supported
