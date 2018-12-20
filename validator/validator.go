@@ -72,6 +72,11 @@ func IsTelephone(str string) bool {
 	return rxTelPhone.MatchString(str)
 }
 
+//只能输入6-20个以字母开头、可带数字、“_”、“.”的字串
+func IsPassword(str string) bool {
+	return rxPassword.MatchString(str)
+}
+
 // IsEmail check if the string is an email.
 func IsEmail(str string) bool {
 	// TODO uppercase letters are not supported
