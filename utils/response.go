@@ -1,5 +1,11 @@
 package utils
 
+const (
+	MSG_OK       = 0  // 成功
+	MSG_ERR      = -1 // 错误
+	MSG_REDIRECT = -2 // 重定向
+)
+
 // Response represents HTTP response body.
 type Response struct {
 	Code int         `json:"code"` // return code, 0 for succ
