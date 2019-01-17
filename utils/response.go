@@ -4,6 +4,7 @@ const (
 	MSG_OK       = 0  // 成功
 	MSG_ERR      = -1 // 错误
 	MSG_REDIRECT = -2 // 重定向
+	MSG_AUTH     = -3 // 登录认证
 )
 
 // Response represents HTTP response body.
@@ -16,7 +17,7 @@ type Response struct {
 // NewResponse creates a result with Code=0, Msg="", Data=nil.
 func NewResponse() *Response {
 	return &Response{
-		Code: 200,
+		Code: MSG_OK,
 		Msg:  "",
 		Data: nil,
 	}
